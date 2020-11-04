@@ -61,7 +61,7 @@ int main(void){
 	// self-joke :)
 	kill(getpid(), SIGINT);  
 	
-	while(sleep(1) == 0);
+	while(1) sleep(1);
 
 	return EXIT_SUCCESS;
 }
