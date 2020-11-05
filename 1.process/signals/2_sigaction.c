@@ -14,7 +14,7 @@ int main(void) {
 	struct sigaction control;
 	
 	control.sa_flags = SA_SIGINFO;
-	control.sa_sigaction = &handler;
+	control.sa_sigaction = handler;
 	
 	if(sigaction(SIGTERM, &control, NULL) == -1) {
 		perror("sigaction");
